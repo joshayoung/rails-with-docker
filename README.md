@@ -13,3 +13,16 @@
 
 - Install rspec:
   - docker-compose run web rails generate rspec:install
+
+- Create the Databases:
+  - docker-compose run web rails db:create
+
+- Generate a model:
+  - docker-compose run web rails g model user name:string
+
+- Run the migrations:
+  - docker-compose run web bin/rails db:migrate RAILS_ENV=test
+  - docker-compose run web bin/rails db:migrate RAILS_ENV=development
+
+- Run Tests:
+  - docker-compose run web rspec
